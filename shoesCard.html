@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes card</title>
+    <style>
+        #cards{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,auto);
+            grid-gap: 10px;
+            margin:0 50px;
+        }
+        .card{
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+        }
+        .card img{
+            width: 100%;
+        }
+        .card button{
+            padding: 10px 50px;
+          
+        }
+    </style>
+</head>
+<body>
+    <div id="cards">
+        <!-- <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.DE9CkHZ9XyiCAMxsi4j9pgHaHc?pid=ImgDet&rs=1" alt="">
+        <h2>puma shoes</h2>
+        <p>1000/-</p>
+        <button>buy now</button>
+        </div> -->
+    </div>
+   
+</body>
+</html>
+<script>
+    let cards=document.getElementById('cards')
+    let price=[1000,10415,4545,254,125,214,254,589,365]
+    
+    for(let i=0;i<=9;i++){
+        let card=document.createElement('div')
+        let img=document.createElement('img')
+        let heading2=document.createElement('h2')
+        let para=document.createElement('p')
+        let button=document.createElement('button')
+
+        card.setAttribute('class','card')
+        img.src="https://th.bing.com/th/id/OIP.DE9CkHZ9XyiCAMxsi4j9pgHaHc?pid=ImgDet&rs=1"
+        heading2.innerText="puma shoes"
+        para.innerText=price[i]
+        button.innerText="buy now"
+
+        cards.append(card)
+        card.append(img)
+        card.append(heading2)
+        card.append(para)
+        card.append(button)
+   
+    }
+</script>
